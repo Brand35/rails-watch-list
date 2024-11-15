@@ -1,7 +1,9 @@
 <h1>coucou tu veux voir ta belle liste de film</h1>
 
 <% @lists.each do |list| %>
-    <%= list.name   %>
+<ul>
+   <li><%= link_to "#{list.name}", list_path(list) %></li>
+    </ul>
 <% end  %>
 
 <%= link_to "New list", new_list_path %>

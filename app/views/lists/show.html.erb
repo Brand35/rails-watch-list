@@ -1,3 +1,18 @@
 <h1>bienvenu</h1>
 
 <h2><%= @list.name %></h2>
+
+     <% @list.movies.each do |movie| %>
+     <div class="card">
+     <ul>
+    <li> <%= movie.title %></li>
+    <li> <%= movie.rating %></li>
+    <li> <%= movie.overview %></li>
+     </ul>
+     </div>
+      <% end %>
+<div>
+  <%= link_to lists_path(@list), class: "text-black" do %>
+    <i class="fa-solid fa-pen-to-square"></i>
+  <% end %>
+</div>
